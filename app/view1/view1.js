@@ -9,6 +9,16 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('View1Ctrl', ['$scope', function($scope) {
+
+  $scope.myName;
+
+  $scope.handleFocus = function(){
+    console.log( "Focused!", $scope.myName );
+  };
+
+  $scope.handleClick = function(){
+    console.log( "Clicked!", $scope.myName );
+  };
 
 }]);
